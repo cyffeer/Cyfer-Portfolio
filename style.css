@@ -417,3 +417,108 @@ footer .socials a:hover {
     font-size: 0.8rem; /* Font size */
     text-align: center; /* Center the text */
 }
+
+/* Mobile Version Styles */
+@media only screen and (max-width: 600px) {
+    /* Adjust navigation for mobile */
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    /* Adjust the logo size */
+    .nav-logo img {
+        max-width: 80px;
+    }
+
+    /* Stack the header content vertically */
+    header {
+        grid-template-columns: 1fr; /* Make the header one column */
+        text-align: center; /* Center the text */
+        padding-top: 1rem;
+    }
+
+    header .image {
+        display: block; /* Ensure the image is visible */
+        margin: 1rem auto; /* Center it with margin on mobile */
+        max-width: 200px; /* Limit the size of the container on mobile */
+    }
+
+    header .image img {
+        max-width: 100%; /* Ensure the image scales to fit the container */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+
+    header .content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    header .content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Adjust the project grid to a single column on mobile */
+    .features-grid {
+        grid-template-columns: 1fr; /* One column layout */
+    }
+
+    /* Make project cards take up the full width */
+    .project-card {
+        width: 100%; /* Full width of container */
+        margin-bottom: 1.5rem; /* Space between cards */
+    }
+
+    /* Adjust buttons for mobile */
+    .btn {
+        padding: 0.8rem 1.5rem; /* Adjust button padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    /* Reduce padding for sections */
+    .container {
+        padding: 2rem 1rem; /* Reduce padding for mobile */
+    }
+
+    /* Stack the education cards vertically */
+    .education, .experience, .certifications {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .education .card, .experience .card, .certifications .card {
+        width: 100%; /* Full width of container */
+        margin-bottom: 1.5rem; /* Space between cards */
+    }
+
+    /* Adjust the certification details panel */
+    .details-panel {
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width on mobile */
+        height: 760px; /* Auto height for content */
+    }
+
+    /* Adjust footer layout */
+    footer {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center text */
+    }
+
+    /* Center-align the copyright text */
+    .copyright {
+        text-align: center;
+    }
+
+    /* Adjust the social icons */
+    .socials a {
+        margin-right: 0.5rem;
+        font-size: 1.2rem; /* Smaller icon size */
+    }
+
+}
