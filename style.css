@@ -1,0 +1,419 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset and global styles */
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #6a6464; /* Fallback color */
+}
+
+.background {
+    position: fixed; /* Use fixed positioning to keep it in place */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height */
+    width: 100vw; /* Full width */
+    z-index: -1; /* Behind all other content */
+    background: linear-gradient(270deg, #1e1e1e, #3b3b3b, #1e1e1e);
+    background-size: 300% 300%; /* For the animation effect */
+    animation: gradient 10s ease infinite; /* Animation */
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    max-width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: #fff;
+    padding-bottom: 0.75rem;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e58c18;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 70%;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #e58c18;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d57c15;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+header .content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+header .content p {
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .image img {
+    max-width: 600px;
+}
+
+/* My Projects Section */
+section.features {
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #e58c18;
+}
+
+/* Projects Cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background-color: #27272a;
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card span {
+    font-size: 2.5rem;
+    color: #e58c18;
+    margin-bottom: 1rem;
+}
+
+.project-card h4 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.project-card p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.view-more-container {
+    text-align: center; /* Center the button text */
+    margin-top: 2rem; /* Space above the button */
+}
+
+.view-more-projects {
+    padding: 0.6rem 1.2rem; /* Button padding */
+    background-color: #e58c18; /* Button background */
+    color: #fff; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover */
+    font-size: 1rem; /* Font size */
+    display: inline-block; /* Inline block to center correctly */
+}
+
+.view-more-projects:hover {
+    background-color: #d57c15; /* Darker button on hover */
+}
+
+/* Button for More Projects */
+.features .btn-project {
+    padding: 0.4rem 0.6rem; /* Smaller button padding */
+    background-color: #e58c18; /* Button background */
+    color: #fff; /* Button text color */
+    border-radius: 2px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover */
+    font-size: 0.9rem; /* Smaller font size */
+    display: inline-flex; /* Inline-flex to align icon and text */
+    align-items: center; /* Center items vertically */
+}
+
+.features .btn-project:hover {
+    background-color: #d57c15; /* Darker button on hover */
+}
+
+/* Education and Experience Section */
+.education-section, .experience-section {
+    background-color: #1e1e1e;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.education, .experience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.education .card, .experience .card {
+    background-color: #27272a;
+    padding: 2rem;
+    border-radius: 10px;
+    width: calc(33% - 20px);
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education .card:hover, .experience .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.education .card h4, .experience .card h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.education .card p {
+    color: #fff; /* Change text color to white */
+}
+
+.experience-section .card p {
+    color: #fff; 
+}
+
+.experience-section .card li {
+    color: #fff; 
+}
+
+.education .card h3, .experience .card h3 {
+    font-size: 1.2rem;
+    color: #e58c18;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer .logo img {
+    max-width: 100px;
+}
+
+footer .column {
+    flex: 1;
+}
+
+footer .column h4, footer .column a {
+    color: #fff;
+}
+
+footer .column a:hover {
+    color: #e58c18;
+}
+
+footer .socials a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+footer .socials a:hover {
+    color: #e58c18;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header .image {
+        display: none;
+    }
+
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Certifications Section */
+.certifications-section {
+    margin-top: 2rem; /* Space above the certifications section */
+}
+
+.ex .card p {
+    color: #fff; /* Change text color to white */
+}
+.certifications-container {
+    display: flex; /* Use flexbox to arrange cards and details */
+    align-items: flex-start; /* Align items to the start */
+    width: 100%; /* Ensure it uses the full width of the parent */
+}
+
+
+.certifications {
+    display: flex; /* Arrange cards in a row */
+    flex-direction: column; /* Stack cards vertically */
+    gap: 1rem; /* Space between cards */
+    width: 200px; /* Fixed width for the cards column */
+}
+
+
+.certifications .card {
+    background-color: #27272a; /* Card background color */
+    padding: 1rem; /* Padding for cards */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+    cursor: pointer; /* Pointer cursor for clickable cards */
+    height: 120px; /* Set a fixed height for the card */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.certifications .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+.certifications .card h5 {
+    margin: 0; /* Prevent margin shift on hover */
+    font-size: 1rem; /* Adjust font size */
+    color: #fff; /* Color for title */
+}
+
+.certifications .card:hover h5 {
+    color: #e58c18; /* Change color on hover */
+}
+
+.details {
+    color: #ccc; /* Color for details text */
+    font-size: 1rem; /* Font size for better readability */
+    line-height: 1.5; /* Line height for improved readability */
+}
+
+/* Details panel for the clicked certification */
+.details-panel {
+    background-color: #1e1e1e; /* Background color for the details panel */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem; /* Padding for the details panel */
+    flex: 4; /* Allow details panel to take available space */
+    height: 660px; /* Fixed height for details panel */
+    overflow-y: hidden; /* Prevent vertical scroll */
+    margin-left: 2rem; /* Adjust the margin to the left for positioning */
+}
+
+.details .button {
+    padding: 0.6rem 1.2rem; /* Increase button padding */
+    background-color: #e58c18; /* Green button background */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition for hover */
+}
+
+.details .button:hover {
+    background-color: #d57c15; /* Darker background on hover */
+}
+
+/* Section header styles */
+.section-header {
+    font-size: 2.5rem; /* Font size similar to "My Projects" */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 2rem; /* Space below the header */
+    text-align: center; /* Center the header text */
+    color: #e58c18; /* Header color matching the design */
+}
+
+/* Copyright Section */
+.copyright {
+    max-width: 1200px; /* Optional: Set a maximum width for the copyright */
+    margin: auto; /* Center the container */
+    padding: 1rem; /* Padding for spacing */
+    color: #fff; /* Text color */
+    font-size: 0.8rem; /* Font size */
+    text-align: center; /* Center the text */
+}
