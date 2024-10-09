@@ -269,6 +269,10 @@ section.features {
     margin-bottom: 1rem;
 }
 
+.social-text {
+    color: #fff; /* White color */
+}
+
 /* Footer */
 footer {
     display: flex;
